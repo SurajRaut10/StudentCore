@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mob No</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Course</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <th scope="row">@m.Sid</th>
+                <td>@m.Sname</td>
+                <td>@m.Address</td>
+                <td>@m.Semail</td>
+                <td>@m.Smobno</td>
+                <td>@m.Gender</td>
+                <td>@m.Course</td>
+                <td>
+                    <a href="Home/Edit/@m.Sid">Edit</a>|
+                    <a href="Home/Details/@m.Sid">Details</a>|
+                    <a href="Home/Delete/@m.Sid">Delete</a>
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
