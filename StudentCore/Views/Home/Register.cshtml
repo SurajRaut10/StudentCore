@@ -3,6 +3,7 @@
 *@
 @{
 }
+@model StudentCore.Models.Student;
 <style>
     * {
         margin: 0;
@@ -186,9 +187,13 @@
 
         <form class="form" action="Register" method="post">
             <input type="text" placeholder="Name" name="Sname" class="textbox" />
+            <span asp-validation-for="Sname"></span></>
             <input type="text" placeholder="Address" name="Address" class="textbox" />
+            <span asp-validation-for="Address"></span></>
             <input type="text" placeholder="Email Address" name="Semail" class="textbox" />
+            <span asp-validation-for="Email Address"></span></>
             <input type="text" placeholder="Mobile No" name="Smobno" class="textbox" />
+            <span asp-validation-for="Smobno"></span></>
             <label>Gender:</label>
             <div class="radio-group">
                 <label><input type="radio" name="gender" value="male" /> Male</label>
