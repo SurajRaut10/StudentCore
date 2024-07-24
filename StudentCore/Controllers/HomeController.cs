@@ -16,6 +16,7 @@ namespace StudentCore.Controllers
             this.c1 = c1;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             var t=c1.Students.ToList();
